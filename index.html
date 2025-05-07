@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фестиваль "Мы и наши маленькие волшебники" 2024</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #f7f7f7;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 6rem 2rem;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: #6a11cb;
+        }
+        .festival-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .festival-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gallery-image {
+            transition: all 0.3s ease;
+        }
+        .gallery-image:hover {
+            transform: scale(1.03);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: #6a11cb;
+            transform: translateX(-50%);
+            transition: width 0.3s;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto flex flex-wrap justify-between items-center px-4">
+            <div class="flex items-center">
+                <a href="#" class="text-xl font-bold text-purple-800">
+                    Фестиваль "Мы и наши маленькие волшебники"
+                </a>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#about" class="nav-link text-gray-700 hover:text-purple-700 transition">О фестивале</a>
+                <a href="#author" class="nav-link text-gray-700 hover:text-purple-700 transition">София Агачер</a>
+                <a href="#conditions" class="nav-link text-gray-700 hover:text-purple-700 transition">Как участвовать</a>
+                <a href="#gallery" class="nav-link text-gray-700 hover:text-purple-700 transition">Галерея</a>
+                <a href="#resources" class="nav-link text-gray-700 hover:text-purple-700 transition">Ресурсы</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Фестиваль "Мы и наши маленькие волшебники" 2024</h1>
+            <p class="text-xl md:text-2xl mb-8">Творчество, открытия и волшебство для детей и взрослых</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#conditions" class="bg-white text-purple-700 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition">Принять участие</a>
+                <a href="#about" class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-white hover:text-purple-700 transition">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Festival -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl font-bold text-center">О фестивале</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <img src="https://agacher.com/image/catalog/fest-jivaya-kniga.png" alt="Логотип фестиваля" class="mx-auto h-48">
+                </div>
+                <p class="text-lg mb-6">
+                    Фестиваль «Мы и наши маленькие волшебники» был основан в 2018 году писателем Софией Агачер совместно с детским изданием «Классный журнал». Фестиваль проводится в двух направлениях: сценический фестиваль и фестиваль аудиоспектаклей.
+                </p>
+                <div class="mb-10">
+                    <h3 class="text-2xl font-semibold mb-4">История фестиваля</h3>
+                    <p class="mb-4">
+                        Фестиваль «Живая книга» начался как продолжение конкурса семейного рассказа «Мы и наши маленькие волшебники!» В августе 2023 года по инициативе Гильдии драматургов РФ фестивалю «Живая книга» было присвоено имя его первого Председателя жюри – известного драматурга, поэта, театрального критика Валерия Карловича Бегунова (1948–2023).
+                    </p>
+                    <p class="mb-4">
+                        Специально для участников фестиваля Софией Агачер и Львом Яковлевым были написаны четыре пьесы по мотивам книги «Рассказы о Ромке и его бабушке». За эти годы фестиваль стал важной культурной площадкой для развития детского и юношеского творчества.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Миссия фестиваля</h3>
+                    <blockquote class="italic border-l-4 border-purple-500 pl-4 py-2 mb-4">
+                        «Люди разучились играть, и поэтому совершают жестокие и бессмысленные поступки. Но мы с тобой не разучимся. Я тебе обещаю. И если мир что-то спасёт — это будут детские игры!»
+                    </blockquote>
+                    <p>
+                        Эти слова стали девизом фестиваля. Они произносятся бабушкой Соней — главной героиней пьесы Софии Агачер и Льва Яковлева «Грустный телевизор». Фестиваль направлен на поддержку детского творчества, развитие семейного чтения и создание добрых, вдохновляющих произведений.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Festival Programs -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl font-bold text-center">Программы фестиваля</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="festival-card bg-white p-6">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-theater-masks text-5xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-center">Сценический фестиваль</h3>
+                    <p class="mb-4">
+                        Участники представляют свои спектакли на сцене Московского Дома Книги на Арбате. Театральные коллективы могут представлять как пьесы, написанные специально для фестиваля, так и другие произведения, одобренные жюри.
+                    </p>
+                    <p class="text-sm text-gray-600">
+                        Период проведения: октябрь-ноябрь 2024 года
+                    </p>
+                </div>
+                
+                <div class="festival-card bg-white p-6">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-microphone text-5xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-center">Фестиваль аудиоспектаклей</h3>
+                    <p class="mb-4">
+                        Лучшие аудиоспектакли транслируются на различных радио- и интернет-площадках под рубрикой «Фестиваль "Живая книга" у микрофона!». Финал фестиваля аудиоспектаклей проходит в декабре на радио «Антология».
+                    </p>
+                    <p class="text-sm text-gray-600">
+                        Период приема работ: с 1 февраля по 1 ноября 2024 года
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Sofia Agacher -->
+    <section id="author" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl font-bold text-center">О Софии Агачер</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                        <img src="images/sofia-agacher.jpg" alt="София Агачер" class="rounded-lg shadow-lg mx-auto">
+                    </div>
+                    <div class="w-full md:w-2/3 md:pl-8">
+                        <p class="mb-4">
+                            Елена Васильевна Клименкова (литературный псевдоним София Агачер) родилась 23 июля 1961 года в г. Гомеле Белорусской ССР. Закончила с отличием Минский медицинский институт, аспирантуру 1-го Московского медицинского института им. Сеченова, где и защитила диссертацию по специальности «Анестезиология и реаниматология».
+                        </p>
+                        <p>
+                            София Агачер начала писать в 2013 году. В 2018 году стала соучредителем издательства «ЛАСА», в 2019 году — членом Московской организации Союза Писателей России, в 2019 году — соучредителем благотворительного фонда «Живая книга».
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Творчество и достижения</h3>
+                    <p class="mb-4">
+                        София Агачер является автором многочисленных рассказов, которые печатались в журналах «Юность», «Дон», «Север», «Литературная газета», «Независимая газета», «Ревизор», «Вторник», «Клаузура», «45 параллель». Она автор книги для семейного чтения «Рассказы о Ромке и его бабушке» и романов «Твоими глазами» и «Путешествие внутри себя».
+                    </p>
+                    <p>
+                        Роман «Твоими глазами» был награжден серебряной медалью Германского международного конкурса «Лучшая книга года» 2020 и вошёл в лонг-лист премии им. Фазиля Искандера, а роман «Путешествие внутри себя» получил в 2021 году бронзовую медаль Германского международного конкурса «Лучшая книга года» и также вошёл в лонг-лист премии им. Фазиля Искандера.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Participation Conditions -->
+    <section id="conditions" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl font-bold text-center">Условия участия</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-10">
+                    <h3 class="text-2xl font-semibold mb-4">Сценический фестиваль</h3>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <ul class="list-disc pl-5 space-y-3">
+                            <li>Сроки подачи заявок: до 15 октября 2024 года</li>
+                            <li>Место проведения: Московский Дом Книги на Арбате</li>
+                            <li>В фестивале могут участвовать любые детские, школьные и юношеские театральные коллективы</li>
+                            <li>Заявки подаются в произвольной форме по адресу: <a href="mailto:agacher.bragbook@gmail.com" class="text-blue-600 underline">agacher.bragbook@gmail.com</a></li>
+                            <li>Участие в фестивале бесплатное</li>
+                            <li>Театральным коллективам и всем юным актёрам вручаются памятные призы</li>
+                        </ul>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-semibold mb-2">Номинации сценического фестиваля:</h4>
+                            <ul class="list-disc pl-5">
+                                <li>Лучший спектакль</li>
+                                <li>Лучший исполнитель</li>
+                                <li>Лучший спектакль по мнению зрителей (приз зрительских симпатий)</li>
+                                <li>Лучшая сценическая импровизация литературного произведения</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Фестиваль аудиоспектаклей</h3>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <ul class="list-disc pl-5 space-y-3">
+                            <li>Сроки подачи аудиоспектаклей: с 1 февраля по 1 ноября 2024 года</li>
+                            <li>Аудиоспектакли в формате МР3 принимаются на электронную почту: <a href="mailto:agacher.bragbook@gmail.com" class="text-blue-600 underline">agacher.bragbook@gmail.com</a></li>
+                            <li>Вместе с аудиозаписью необходимо прислать информацию о театральном коллективе, исполнителях и текст аудиоспектакля</li>
+                            <li>Требуется разрешение от автора и композитора, а также разрешение от родителей на трансляцию аудиоспектакля</li>
+                            <li>Участие в фестивале бесплатное</li>
+                        </ul>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-semibold mb-2">Номинации фестиваля аудиоспектаклей:</h4>
+                            <ul class="list-disc pl-5">
+                                <li>Лучший аудиоспектакль</li>
+                                <li>Лучший исполнитель</li>
+                                <li>Лучшая сценическая импровизация литературного произведения</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <a href="mailto:agacher.bragbook@gmail.com" class="bg-purple-700 hover:bg-purple-600 text-white font-bold py-3 px-8 rounded-full inline-block transition">Подать заявку на участие</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl font-bold text-center">Фото с фестиваля</h2>
+            
+            <!-- Афиша фестиваля -->
+            <div class="max-w-4xl mx-auto mb-8 text-center">
+                <h3 class="text-2xl font-semibold mb-4">Афиша фестиваля</h3>
+                <img src="images/afisha-f-2024.jpeg" alt="Афиша фестиваля 2024" class="mx-auto rounded-lg shadow-lg mt-4 max-w-sm">
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+                <!-- Все 12 фотографий -->
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="images/foto/1f.jpeg" alt="Фото 1" class="w-full h-64 object-contain gallery-image bg-white">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="images/foto/2f.jpeg" alt="Фото 2" class="w-full h-64 object-contain gallery-image bg-white">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="images/foto/3f.jpeg" alt="Фото 3" class="w-full h-64 object-contain gallery-image bg-white">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="images/foto/4f.jpeg" alt="Фото 4" class="w-full h-64 object-contain gallery-image bg-white">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="images/foto/5f.jpeg" alt="Фото 5" class="w-full h-64 object-contain gallery-image bg-white">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="images/foto/6f.jpeg" alt="Фото 6" class="w-full h-64 object-contain gallery-image bg-white">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="images/foto/7f.jpeg" alt="Фото 7" class="w-full h-64 object-contain gallery-image bg-white">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="images/foto/8f.jpeg" alt="Фото 8" class="w-full h-64 object-contain gallery-image bg-white">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="images/foto/9f.jpeg" alt="Фото 9" class="w-full h-64 object-contain gallery-image bg-white">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="images/foto/10f.jpeg" alt="Фото 10" class="w-full h-64 object-contain gallery-image bg-white">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="images/foto/11f.jpeg" alt="Фото 11" class="w-full h-64 object-contain gallery-image bg-white">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="images/foto/12f.jpeg" alt="Фото 12" class="w-full h-64 object-contain gallery-image bg-white">
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <h3 class="text-2xl font-semibold mb-6">Финал фестиваля детских театральных коллективов «Живая книга»</h3>
+                <div class="max-w-4xl mx-auto">
+                    <div class="video-container shadow-lg rounded-lg overflow-hidden">
+                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/4RjbrAxiOWU" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources and Links -->
+    <section id="resources" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl font-bold text-center">Ресурсы и ссылки</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Материалы для участников</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="https://ridero.ru/books/catalog/?offset=0&q=%D0%96%D0%B8%D0%B2%D0%B0%D1%8F+%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0+%D0%A1%D0%BE%D1%84%D0%B8%D1%8F+%D0%90%D0%B3%D0%B0%D1%87%D0%B5%D1%80" class="flex items-center text-blue-600 hover:text-blue-800 transition">
+                                    <i class="far fa-file-alt mr-2"></i>
+                                    Сборник пьес «Живая книга» (бесплатное скачивание)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center text-blue-600 hover:text-blue-800 transition">
+                                    <i class="fas fa-book mr-2"></i>
+                                    Рассказы о Ромке и его бабушке
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center text-blue-600 hover:text-blue-800 transition">
+                                    <i class="fas fa-file-download mr-2"></i>
+                                    Положение о фестивале 2024 года
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center text-blue-600 hover:text-blue-800 transition">
+                                    <i class="fas fa-file-signature mr-2"></i>
+                                    Шаблон заявки на участие
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-4">Полезные ссылки</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="https://agacher.com" class="flex items-center text-blue-600 hover:text-blue-800 transition">
+                                    <i class="fas fa-globe mr-2"></i>
+                                    Официальный сайт Софии Агачер
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://vk.com/jivayaknigafond" class="flex items-center text-blue-600 hover:text-blue-800 transition">
+                                    <i class="fab fa-vk mr-2"></i>
+                                    Группа ВКонтакте "Живая книга"
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.classmag.ru" class="flex items-center text-blue-600 hover:text-blue-800 transition">
+                                    <i class="fas fa-newspaper mr-2"></i>
+                                    Классный журнал
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://mdk-arbat.ru" class="flex items-center text-blue-600 hover:text-blue-800 transition">
+                                    <i class="fas fa-building mr-2"></i>
+                                    Московский Дом Книги на Арбате
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.vtornik.online/radio-antology" class="flex items-center text-blue-600 hover:text-blue-800 transition">
+                                    <i class="fas fa-broadcast-tower mr-2"></i>
+                                    Радио «Антология»
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-10 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Организаторы и спонсоры</h3>
+                    <div class="flex flex-wrap items-center justify-center gap-8 mt-4">
+                        <div class="text-center">
+                            <img src="https://agacher.com/image/catalog/lasa-logo-small.png" alt="Логотип ЛАСА" class="h-16 mx-auto mb-2">
+                            <p class="text-sm">Издательство «ЛАСА»</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="https://agacher.com/image/catalog/Klassnyj_zhurnal.png" alt="Классный журнал" class="h-16 mx-auto mb-2">
+                            <p class="text-sm">Классный журнал</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-3xl md:text-4xl font-bold text-center">Контакты</h2>
+            <div class="max-w-2xl mx-auto text-center">
+                <p class="text-lg mb-6">
+                    Для связи с организаторами фестиваля и получения дополнительной информации используйте следующие контакты:
+                </p>
+                <div class="space-y-4">
+                    <div>
+                        <i class="fas fa-envelope text-purple-600 text-xl mr-2"></i>
+                        <span>Email: </span>
+                        <a href="mailto:agacher.bragbook@gmail.com" class="text-blue-600 underline">agacher.bragbook@gmail.com</a>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt text-purple-600 text-xl mr-2"></i>
+                        <span>Адрес проведения: </span>
+                        <span>Московский дом книги на Арбате, Новый Арбат, д. 8, Москва</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-globe text-purple-600 text-xl mr-2"></i>
+                        <span>Сайт: </span>
+                        <a href="https://agacher.com" class="text-blue-600 underline">agacher.com</a>
+                    </div>
+                </div>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <a href="https://vk.com/jivayaknigafond" class="text-gray-600 hover:text-purple-600 text-2xl transition">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="https://t.me/mdk_books" class="text-gray-600 hover:text-purple-600 text-2xl transition">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-purple-600 text-2xl transition">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-purple-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold">Фестиваль "Мы и наши маленькие волшебники" 2024</h2>
+                    <p class="mt-2 text-purple-200">
+                        Творчество, открытия и волшебство для детей и взрослых
+                    </p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-purple-200 mb-2">&copy; 2024 Фестиваль "Мы и наши маленькие волшебники"</p>
+                    <p class="text-purple-300 text-sm">Организатор: София Агачер</p>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-purple-300 text-sm">
+                <p>
+                    «Если мир что-то спасёт — это будут детские игры!»
+                </p>
+            </div>
+        </div>
+    </footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

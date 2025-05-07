@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <style>
+    .title { font-family: Arial, sans-serif; font-weight: bold; }
+    .main-title { font-size: 36px; fill: #ffffff; }
+    .subtitle { font-size: 20px; fill: #f0f0f0; }
+  </style>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6a11cb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2575fc;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="200" rx="10" ry="10" fill="url(#grad)"/>
+  <text x="400" y="80" text-anchor="middle" class="title main-title">Фестиваль "Мы и наши маленькие волшебники"</text>
+  <text x="400" y="120" text-anchor="middle" class="title subtitle">Творчество, открытия и волшебство для детей и взрослых</text>
+  <circle cx="150" cy="150" r="15" fill="#ffffff" opacity="0.7"/>
+  <circle cx="200" cy="160" r="10" fill="#ffffff" opacity="0.5"/>
+  <circle cx="650" cy="140" r="12" fill="#ffffff" opacity="0.6"/>
+  <circle cx="700" cy="160" r="8" fill="#ffffff" opacity="0.4"/>
+</svg>
